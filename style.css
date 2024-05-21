@@ -1,25 +1,39 @@
-.container{
+/* input field */
+.input-container {
+    width: 50vw;
+    margin: auto;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+/* progress bar container */
+.container {
     border: 1px solid black;
-    width: 1000px;
+    width: 800px;
     height: 20px;
     margin: auto;
     background-color: lightgray;
     border-radius: 1rem;
+    position: relative;
 }
 
-.progress-bar{
+/* progress bar */
+.progress-bar {
     height: 100%;
+    max-width: 100%;
     border-radius: 1rem;
+    -webkit-mask: linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0);
     transition: width 200ms;
-    -webkit-mask:linear-gradient(#fff 0 0);
-          mask:linear-gradient(#fff 0 0);
 }
+
+/* progress bar before input value */
 .progress-bar::before {
-    content:"";
-    position:absolute;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background-image: linear-gradient(to right, #d0021b, #fb0, #47d912); /* your gradient here */
-  }
+}
